@@ -7,7 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    
+    {{-- Hello --}}
+<?php
+$text="Hello $name -Mobile$mobile";
+// print_r($name);
+// print_r($mobile)
+?>
+    <br>
     {{-- /f1 documentRoot 的位置進入 --}}
     <a href="{{route('route.f1')}}">go-f1</a><br>
     <a href="{{route('route.f2')}}">go-f2</a><br>

@@ -29,7 +29,7 @@ dd($sum);
 //     return view('test');
 // });
 Route::get('/', function () {
-    return view('index');
+    return view('index',['name'=>'jason','mobile'=>'0912-345-678']);
 });
 Route::get('/go_taisan', function () {
     return view('taisan');
@@ -45,4 +45,16 @@ Route::get('/f3', function () {
 })->name('route.f3');
 Route::get('/students', function () {
     return view('student.index');
+});
+Route::get('/user{/id}', function () {
+    return view('student.index');
+});
+Route::get('/user/{id}', function (string $id) {
+    // return 'User '.$id;
+    dd($id);
+});
+Route::get('/posts/{post}/comments/{comment}/tests/{test}', function (string $postId, string $commentId,string $test) {
+    // ...
+    $text= $postId ."_" . $commentId . "_" . $test;
+    dd($text);
 });
